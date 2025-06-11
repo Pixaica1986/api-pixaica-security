@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: api-pixaica-security
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security
+    password: admin
+    username: postgres
+    jpa:
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          show_sql: true
+          format_sql: true
+
+jwt:
+  secret: c1e4e9c0dfc3d662beaf9cea1f02d98e657a46e5a0dec3e9943c29c8c7ad804c
+  expiration: 3600 # 1 hour in seconds
+  issuer: api-pixaica-security
